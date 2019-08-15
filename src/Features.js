@@ -1,16 +1,18 @@
 import React from "react";
-import Feature from "./Feature";
+import "./App.css";
+import FeatureList from "./FeatureList";
 
-export default class Features extends React.Component {
-  render() {
-    const features = Object.keys(this.props.features).map((feature, idx) => {
-      <Feature
-        feature={feature}
-        featureIndex={idx}
-        handleSelect={this.props.handleSelect}
-      />;
-    });
-
-    return features;
-  }
+function Features(props) {
+  return (
+    <section className="main__form">
+      <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
+      <FeatureList
+        features={props.features}
+        handleUpdate={props.handleUpdate}
+        selected={props.selected}
+      />
+    </section>
+  );
 }
+
+export default Features;
