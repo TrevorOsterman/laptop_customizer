@@ -1,10 +1,11 @@
 import React from "react";
 
 function FeatureList(props) {
+  console.log(props.features);
   const features = Object.keys(props.features).map(key => {
     const options = props.features[key].map((item, index) => {
       const selectedClass =
-        item.name === props.selected.name ? "feature__selected" : null;
+        item.name === props.selected.name ? "feature__selected" : "";
       const featureClass = "feature__option " + selectedClass;
       return (
         <li key={index} className="feature__item">
