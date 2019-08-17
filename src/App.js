@@ -6,6 +6,10 @@ import Summary from "./Summary";
 import Header from "./Header";
 
 class App extends Component {
+  static defaultProps = {
+    features: {}
+  };
+
   constructor(props) {
     super(props);
     this.state = {
