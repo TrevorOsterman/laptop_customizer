@@ -1,7 +1,7 @@
 import React from "react";
 
 function FeatureList(props) {
-  console.log(props.features);
+  FeatureList.defaultProps = {};
   const features = Object.keys(props.features).map(key => {
     const options = props.features[key].map((item, index) => {
       const selectedClass =
